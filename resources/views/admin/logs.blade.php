@@ -15,10 +15,10 @@
             <div class="pagewrap">
                 <span class="layui-breadcrumb">
                   <a href="">首页</a>
-                  <a href="">防御记录</a>
-                  <a><cite>记录</cite></a>
+                  <a href="">防火墙</a>
+                  <a><cite>防御日志</cite></a>
                 </span>
-                <h2 class="title">记录</h2>
+                <h2 class="title">日志</h2>
             </div>
         </div>
         <div class="layui-row">

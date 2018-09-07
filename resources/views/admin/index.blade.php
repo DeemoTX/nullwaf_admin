@@ -47,40 +47,50 @@
                 <ul id="Nav" class="layui-nav layui-nav-tree">
                     <li class="layui-nav-item">
                         <a href="javascript:;">
-                            <i class="layui-icon">&#xe609;</i>
+                            <i class="layui-icon">&#xe665;</i>
                             <em>面板</em>
                         </a>
                         <dl class="layui-nav-child">
-                            <dd><a href="console">态势概览</a></dd>
+                            <dd><a href="{{ route('console') }}">态势概览</a></dd>
                         </dl>
                     </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;">
-                            <i class="layui-icon">&#xe857;</i>
-                            <em>防御记录</em>
+                            <i class="layui-icon">&#xe672;</i>
+                            <em>防火墙</em>
                         </a>
                         <dl class="layui-nav-child">
-                            <dd><a href="waf_logs">记录</a></dd>
-                            {{--<dd>--}}
-                                {{--<a href="javascript:;">页面</a>--}}
-                                {{--<dl class="layui-nav-child">--}}
-                                    {{--<dd>--}}
-                                        {{--<a href="login.html">登录页</a>--}}
-                                    {{--</dd>--}}
-                                {{--</dl>--}}
-                            {{--</dd>--}}
+                            <dd><a href="{{ route('waf_logs') }}">防御日志</a></dd>
+                            <dd>
+                                <a href="javascript:;">防火墙配置</a>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="{{ route('waf_config') }}">系统配置</a>
+                                    </dd>
+                                </dl>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="{{ route('waf_rules') }}">自定义规则</a>
+                                    </dd>
+                                </dl>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="{{ route('waf_white') }}">白名单设置</a>
+                                    </dd>
+                                </dl>
+                            </dd>
                         </dl>
                     </li>
-                    {{--<li class="layui-nav-item">--}}
-                        {{--<a href="javascript:;">--}}
-                            {{--<i class="layui-icon">&#xe612;</i>--}}
-                            {{--<em>用户</em>--}}
-                        {{--</a>--}}
-                        {{--<dl class="layui-nav-child">--}}
-                            {{--<dd><a href="views/users.html">用户组</a></dd>--}}
-                            {{--<dd><a href="views/operaterule.html">权限配置</a></dd>--}}
-                        {{--</dl>--}}
-                    {{--</li>--}}
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe609;</i>
+                            <em>高级功能</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="{{ route('forecast') }}">攻击预测</a></dd>
+                            <dd><a href="{{ route('blockchain') }}">区块链日志</a></dd>
+                        </dl>
+                    </li>
                 </ul>
 
             </div>
@@ -94,7 +104,7 @@
         </div>
 
         <div class="layui-footer">
-            <p>© 2018 重庆大学NullWAF项目组</p>
+            <p>© 2018 NullWAF</p>
         </div>
 
         <div class="mobile-mask"></div>
